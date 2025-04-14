@@ -45,12 +45,21 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center py-10 bg-transparent">
-      {/* Project Cards Container */}
-      <div
-        id="projects"
-        className="mt-10 flex flex-col md:flex-row gap-10 px-6 relative"
+    <div
+      id="projects"
+      className="min-h-screen flex flex-col items-center pt-20 bg-transparent"
+    >
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="text-4xl md:text-4xl font-bold text-center bg-gradient-to-br from-blue-300 to-blue-500 bg-clip-text text-transparent "
       >
+        Projects
+      </motion.h2>
+      {/* Project Cards Container */}
+      <div className="mt-10 flex flex-col md:flex-row gap-10 px-6 relative">
         {/* Loop through projects and display cards */}
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} delay={index * 0.2} />
@@ -70,7 +79,7 @@ const ProjectCard = ({ project, delay }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.6, ease: "easeInOut" }}
       className="group border border-blue-400 backdrop-blur-lg bg-white/5 
-        rounded-2xl shadow-xl hover:scale-[1.02] transition-transform duration-300 
+        rounded-2xl shadow-xl hover:scale-[1.08] transition-transform duration-300 
         w-full md:w-[26rem] h-auto flex flex-col overflow-hidden z-0"
     >
       {/* Glowing effect */}

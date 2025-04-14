@@ -48,7 +48,10 @@ const categories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="pt-7 pb-10 px-4 bg-transparent">
+    <section
+      id="skills"
+      className="pt-20 pb-10 px-4 h-fit lg:h-screen bg-transparent"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +62,7 @@ export const Skills = () => {
         My Skills
       </motion.h2>
 
-      <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full mx-auto">
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full mx-auto  ">
         {categories.map((category, index) => (
           <motion.div
             key={index}

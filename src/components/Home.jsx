@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <div
       id="home"
-      className="flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen px-6 lg:px-20 cursor-default gap-10"
+      className="flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen px-6 lg:px-20 cursor-default gap-10 py-24 lg:py-0"
     >
       {/* Left Section: Text Content */}
       <div className="max-w-xl text-center lg:text-left">

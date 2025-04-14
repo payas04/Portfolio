@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa"; // Add hamburger and close ico
 
 export const Navbar = () => {
   const [active, setActive] = useState("home");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
 
   const navItems = [
@@ -33,9 +34,15 @@ export const Navbar = () => {
       setActive(currentSection);
     };
 
+    // const handleResize = () => {
+    //   setIsMobile(window.innerWidth < 1024);
+    // };
+
+    // window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      // window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -74,7 +81,7 @@ export const Navbar = () => {
                 to={item}
                 smooth={true}
                 duration={500}
-                offset={-100}
+                // offset={isMobile ? -100 : -10}
                 onClick={() => setActive(item)}
                 className={`cursor-pointer transition-all duration-300 ${
                   active === item ? "text-blue-400" : "hover:text-blue-300"

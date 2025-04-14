@@ -47,17 +47,20 @@ export const Experience = () => {
   ];
 
   return (
-    <div className="relative h-fit w-full lg:flex items-center justify-center py-10 px-4">
-      <div className="mb-6 text-center text-blue-400 text-2xl font-bold tracking-widest lg:-rotate-90 lg:mb-0">
-        Experience
+    <div
+      id="experience"
+      className="p-6 py-20 lg:py-0 h-fit lg:h-screen w-screen lg:flex lg:justify-center"
+    >
+      <div className="mb-6 text-center text-blue-400 text-2xl font-bold tracking-widest lg:h-full lg:flex lg:flex-col lg:justify-center">
+        <p className="h-fit lg:transform lg:rotate-270">Experience</p>
       </div>
-      <div id="experience" className="flex flex-col gap-6 w-full max-w-5xl">
+      <div className="flex flex-col gap-6 w-full justify-center max-w-5xl">
         {companyData.map((company, index) => (
           <motion.div
             className="w-full"
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 100, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
           >
             <Company {...company} />
