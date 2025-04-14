@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa"; // Add hamburger and close icons
 
@@ -14,6 +14,31 @@ export const Navbar = () => {
     "experience",
     "contact",
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = "";
+      navItems.forEach((item) => {
+        const section = document.getElementById(item);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2
+          ) {
+            currentSection = item;
+          }
+        }
+      });
+      setActive(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl bg-white/5 backdrop-blur-md border border-white/10 rounded-full shadow-lg">
@@ -51,7 +76,6 @@ export const Navbar = () => {
                 duration={500}
                 offset={-100}
                 onClick={() => setActive(item)}
-                onSetActive={() => setActive(item)}
                 className={`cursor-pointer transition-all duration-300 ${
                   active === item ? "text-blue-400" : "hover:text-blue-300"
                 }`}

@@ -1,7 +1,7 @@
 import "./App.css";
 import { Education } from "./components/Education";
 import { Home } from "./components/Home";
-import { Navbar } from "./components/navbar";
+import { Navbar } from "./components/Navbar";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
