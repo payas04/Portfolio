@@ -42,6 +42,28 @@ export const Projects = () => {
       demoUrl: "https://teamjcpc.vercel.app/",
       sourceUrl: "https://github.com/payas04/JCPC",
     },
+    {
+      id: "3",
+      title: "MediumAI - AI-Powered Blogging Platform",
+      description:
+        "MediumAI is a full-stack blogging platform inspired by Medium, featuring AI-assisted content generation, secure authentication, and real-time blog management. It allows users to write, edit, and publish blogs with a seamless and modern interface powered by React and TypeScript.",
+      tags: [
+        "React.js",
+        "TypeScript",
+        "Node.js",
+        "HONO",
+        "MongoDB",
+        "Jotai",
+        "Tailwind CSS",
+        "JWT Authentication",
+        "AI Integration",
+        "Cloudflare Workers",
+        "Serverless",
+      ],
+      imageUrl: "/assets/MediumAI-demo.gif",
+      demoUrl: "https://mediumai.vercel.app/",
+      sourceUrl: "https://github.com/payas04/MediumAI",
+    },
   ];
 
   return (
