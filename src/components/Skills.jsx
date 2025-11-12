@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaGithub, FaAws, FaJsSquare } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGithub,
+  FaAws,
+  FaJsSquare,
+  FaGitAlt,
+} from "react-icons/fa";
 import {
   SiMongodb,
   SiExpress,
@@ -9,7 +16,12 @@ import {
   SiHtml5,
   SiCss3,
   SiJsonwebtokens,
+  SiPrisma,
+  SiSupabase,
+  SiCloudflare,
+  SiGoogle,
 } from "react-icons/si";
+import { GiAtom, GiFlame } from "react-icons/gi"; // Jotai (atom), Hono (flame)
 
 const categories = [
   {
@@ -20,10 +32,11 @@ const categories = [
         label: "React.js",
         color: "text-blue-400 animate-spin-slow",
       },
-      { icon: SiTailwindcss, label: "Tailwind CSS", color: "text-blue-500" },
+      { icon: SiTailwindcss, label: "Tailwind CSS", color: "text-sky-400" },
+      { icon: GiAtom, label: "Jotai", color: "text-green-400" },
       { icon: FaJsSquare, label: "JavaScript", color: "text-yellow-300" },
       { icon: SiHtml5, label: "HTML", color: "text-orange-500" },
-      { icon: SiCss3, label: "CSS", color: "text-blue-700" },
+      { icon: SiCss3, label: "CSS", color: "text-blue-600" },
     ],
   },
   {
@@ -31,6 +44,14 @@ const categories = [
     skills: [
       { icon: FaNodeJs, label: "Node.js", color: "text-green-500" },
       { icon: SiExpress, label: "Express.js", color: "text-gray-300" },
+      { icon: GiFlame, label: "Hono", color: "text-orange-400" },
+      { icon: SiPrisma, label: "Prisma ORM", color: "text-indigo-400" },
+      { icon: SiSupabase, label: "Supabase", color: "text-emerald-400" },
+      {
+        icon: SiCloudflare,
+        label: "Cloudflare Workers",
+        color: "text-orange-400",
+      },
       { icon: SiMongodb, label: "MongoDB", color: "text-green-400" },
       { icon: SiMysql, label: "MySQL", color: "text-blue-600" },
       { icon: SiJsonwebtokens, label: "JWT", color: "text-yellow-600" },
@@ -40,8 +61,10 @@ const categories = [
     title: "Tools & Platforms",
     skills: [
       { icon: FaGithub, label: "GitHub", color: "text-gray-600" },
+      { icon: FaGitAlt, label: "Git", color: "text-orange-500" },
       { icon: SiPostman, label: "Postman", color: "text-red-500" },
       { icon: FaAws, label: "AWS", color: "text-yellow-500" },
+      { icon: SiGoogle, label: "Gemini API", color: "text-blue-400" }, // fallback for Gemini
     ],
   },
 ];
@@ -62,7 +85,7 @@ export const Skills = () => {
         My Skills
       </motion.h2>
 
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full mx-auto  ">
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full mx-auto">
         {categories.map((category, index) => (
           <motion.div
             key={index}
@@ -75,7 +98,7 @@ export const Skills = () => {
             <h3 className="text-xl font-semibold text-white mb-4 text-center border-b border-white/20 pb-2">
               {category.title}
             </h3>
-            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center">
+            <div className="grid grid-cols-3 gap-4 justify-items-center">
               {category.skills.map(({ icon: Icon, label, color }, i) => (
                 <div
                   key={i}
@@ -84,7 +107,7 @@ export const Skills = () => {
                   <Icon
                     className={`${color} text-3xl sm:text-3xl md:text-4xl lg:text-4xl`}
                   />
-                  <span className="mt-1 text-xs sm:text-sm md:text-sm lg:text-sm text-white text-center">
+                  <span className="mt-1 text-xs sm:text-sm text-white text-center">
                     {label}
                   </span>
                 </div>
