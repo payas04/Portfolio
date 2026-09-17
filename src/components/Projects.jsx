@@ -7,21 +7,26 @@ export const Projects = () => {
   const projects = [
     {
       id: "1",
-      title: "EZ Pay - Peer to Peer Money Transfer App",
+      title:
+        "SkillMatch AI - Automated Interview Prep & Resume Tailoring Platform",
       description:
-        "EZpay is a secure, real-time peer-to-peer (P2P) money transfer application built with the MERN stack. It enables users to send and receive money effortlessly while ensuring robust authentication and transaction security.",
+        "SkillMatch AI is an intelligent career preparation tool that evaluates resumes against job descriptions using Google Gemini. It automatically generates role-specific technical and behavioral questions with ideal answers, identifies prioritized skill gaps, builds structured day-by-day study plans, and exports tailored print-ready PDF resumes using Puppeteer.",
       tags: [
-        "MongoDB",
-        "Express.js",
         "React.js",
         "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Google Gemini API",
         "Tailwind CSS",
+        "Zustand",
+        "Puppeteer",
         "JWT Authentication",
-        "Bcrypt",
+        "Google OAuth 2.0",
+        "Zod",
       ],
-      imageUrl: "/assets/ez-demo.gif",
-      demoUrl: "https://ez-payy.vercel.app/",
-      sourceUrl: "https://github.com/payas04/EZpay",
+      imageUrl: "/assets/SkillMatch.gif", // replace with your screenshot/gif path
+      demoUrl: "https://project-skillmatchai.vercel.app/", // your live Vercel link
+      sourceUrl: "https://github.com/payas04/SkillMatch-AI.git", // your GitHub repository
     },
     {
       id: "2",
