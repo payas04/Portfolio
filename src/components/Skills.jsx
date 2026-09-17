@@ -21,9 +21,8 @@ import {
   SiSupabase,
   SiCloudflare,
   SiGoogle,
-  SiZustand, // Zustand state management
 } from "react-icons/si";
-import { GiAtom, GiFlame } from "react-icons/gi"; // Jotai (atom), Hono (flame)
+import { GiAtom, GiFlame, GiBearFace } from "react-icons/gi"; // Jotai (atom), Hono (flame)
 
 const categories = [
   {
@@ -36,7 +35,7 @@ const categories = [
       },
       { icon: SiTailwindcss, label: "Tailwind CSS", color: "text-sky-400" },
       { icon: GiAtom, label: "Jotai", color: "text-green-400" },
-      { icon: SiZustand, label: "Zustand", color: "text-amber-700" },
+      { icon: GiBearFace, label: "Zustand", color: "text-amber-700" },
       { icon: FaJsSquare, label: "JavaScript", color: "text-yellow-300" },
       { icon: SiHtml5, label: "HTML", color: "text-orange-500" },
       { icon: SiCss3, label: "CSS", color: "text-blue-600" },
