@@ -8,6 +8,7 @@ export const Experience = () => {
       logo: "/assets/jio-logo-icon.png",
       time: "Dec 2023 – Present",
       description: [
+        "Revamped the frontend of an internal asset management portal for Jio employees, modernizing the UI/UX and improving overall usability.",
         "Developed a MERN stack web platform to track employee performance, project contributions, and product insights.",
         "Led the AI Bot team, managing training and integration across multiple Jio projects.",
         "Optimized chatbot interactions for improved user engagement across internal tools.",

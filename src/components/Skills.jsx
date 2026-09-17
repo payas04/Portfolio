@@ -6,6 +6,7 @@ import {
   FaAws,
   FaJsSquare,
   FaGitAlt,
+  FaKey, // fallback icon for OAuth
 } from "react-icons/fa";
 import {
   SiMongodb,
@@ -20,6 +21,7 @@ import {
   SiSupabase,
   SiCloudflare,
   SiGoogle,
+  SiZustand, // Zustand state management
 } from "react-icons/si";
 import { GiAtom, GiFlame } from "react-icons/gi"; // Jotai (atom), Hono (flame)
 
@@ -34,6 +36,7 @@ const categories = [
       },
       { icon: SiTailwindcss, label: "Tailwind CSS", color: "text-sky-400" },
       { icon: GiAtom, label: "Jotai", color: "text-green-400" },
+      { icon: SiZustand, label: "Zustand", color: "text-amber-700" },
       { icon: FaJsSquare, label: "JavaScript", color: "text-yellow-300" },
       { icon: SiHtml5, label: "HTML", color: "text-orange-500" },
       { icon: SiCss3, label: "CSS", color: "text-blue-600" },
@@ -55,6 +58,7 @@ const categories = [
       { icon: SiMongodb, label: "MongoDB", color: "text-green-400" },
       { icon: SiMysql, label: "MySQL", color: "text-blue-600" },
       { icon: SiJsonwebtokens, label: "JWT", color: "text-yellow-600" },
+      { icon: FaKey, label: "OAuth 2.0", color: "text-purple-400" },
     ],
   },
   {
@@ -64,7 +68,7 @@ const categories = [
       { icon: FaGitAlt, label: "Git", color: "text-orange-500" },
       { icon: SiPostman, label: "Postman", color: "text-red-500" },
       { icon: FaAws, label: "AWS", color: "text-yellow-500" },
-      { icon: SiGoogle, label: "Gemini API", color: "text-blue-400" }, // fallback for Gemini
+      { icon: SiGoogle, label: "Gemini API", color: "text-blue-400" },
     ],
   },
 ];
